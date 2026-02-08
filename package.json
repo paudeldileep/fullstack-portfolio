@@ -1,0 +1,38 @@
+{
+  "name": "fullstack-portfolio",
+  "description": "A comprehensive fullstack portfolio website with blog and admin dashboard",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "author": "Your Name",
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "build": "pnpm -r build",
+    "build:frontend": "pnpm --filter frontend build",
+    "build:backend": "pnpm --filter backend build",
+    "test": "pnpm -r test",
+    "test:frontend": "pnpm --filter frontend test",
+    "test:backend": "pnpm --filter backend test",
+    "test:e2e": "pnpm -r test:e2e",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "format": "prettier --write .",
+    "type-check": "pnpm -r type-check"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "typescript": "^5.3.3"
+    }
+  }
+}
