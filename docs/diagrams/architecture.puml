@@ -1,0 +1,14 @@
+@startuml
+skinparam componentStyle rectangle
+
+component "Vercel" as vercel
+component "Next.js Web (apps/web)" as web
+component "API Route Handlers" as api
+database "MongoDB Atlas" as mongo
+component "Vercel Blob" as blob
+
+vercel --> web
+web --> api
+api --> mongo
+api --> blob
+@enduml

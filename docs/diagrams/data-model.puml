@@ -1,0 +1,78 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity users {
+  * _id
+  --
+  email (unique)
+  passwordHash
+  name
+  role
+  status
+  createdAt
+  updatedAt
+}
+
+entity pages {
+  * _id
+  --
+  slug (unique)
+  status
+  blocks[]
+  seo
+  updatedAt
+}
+
+entity posts {
+  * _id
+  --
+  slug (unique)
+  title
+  summary
+  contentMdx
+  tags[]
+  status
+  publishedAt
+  seo
+  createdAt
+  updatedAt
+}
+
+entity projects {
+  * _id
+  --
+  slug (unique)
+  name
+  summary
+  detailsMdx
+  tech[]
+  coverImage
+  gallery[]
+  status
+  featured
+  createdAt
+  updatedAt
+}
+
+entity contactMessages {
+  * _id
+  --
+  name
+  email
+  message
+  status
+  createdAt
+}
+
+entity siteSettings {
+  * _id
+  --
+  contactEmail
+  socialLinks
+  theme
+  media
+  updatedAt
+}
+
+@enduml
